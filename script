@@ -1,0 +1,51 @@
+// I prevent form submission if fields are empty and validate email format
+document.getElementById("ticketForm").addEventListener("submit", function(event) {
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (name === "" || email === "") {
+        alert("Please fill out all fields before reserving!");
+        event.preventDefault(); // Stops form submission
+    } else if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address!");
+        event.preventDefault(); // Stops form submission
+    } else {
+        alert("🎉 Your reservation for Superman 2025 is confirmed!");
+    }
+});
+
+// I toggle hidden details when clicking the reveal button
+document.getElementById("revealButton").addEventListener("click", function() {
+    let details = document.getElementById("hiddenDetails");
+    details.style.display = details.style.display === "none" ? "block" : "none";
+});
+
+// I update the excitement level dynamically with the slider
+document.getElementById("excitementSlider").addEventListener("input", function() {
+    document.getElementById("excitementValue").textContent = this.value;
+});
+
+// I make the modal pop up when a button is clicked
+document.getElementById("openModal").addEventListener("click", function() {
+    document.getElementById("supermanModal").style.display = "block";
+});
+
+// I close the modal when the X button is clicked
+document.querySelector(".close").addEventListener("click", function() {
+    document.getElementById("supermanModal").style.display = "none";
+});
+
+// I add keyboard accessibility for modal
+document.addEventListener("keydown", function(event) {
+    let modal = document.getElementById("supermanModal");
+    if (event.key === "Escape" && modal.style.display === "block") {
+        modal.style.display = "none";
+    }
+});
+
+document.querySelector(".close").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        document.getElementById("supermanModal").style.display = "none";
+    }
+});

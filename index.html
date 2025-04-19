@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superman 2025 - Get Ready!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+
+    <!-- I created a bold superhero header with key movie details -->
+    <header>
+        <h1>🚀 Superman 2025 - The Dawn of Hope</h1>
+        <p>Directed by James Gunn | Starring David Corenswet | Releasing July 11, 2025</p>
+    </header>
+
+    <!-- I added a ticket reservation form with validation -->
+    <section>
+        <form id="ticketForm" aria-labelledby="formHeading">
+            <h2 id="formHeading">🎟️ Reserve Your Tickets Now!</h2>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" required aria-required="true">
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" required aria-required="true">
+
+            <button type="submit">Reserve Now</button>
+        </form>
+    </section>
+
+    <!-- I made a section with hidden movie details to be revealed dynamically -->
+    <section>
+        <h2>🔍 Hidden Details About Superman 2025</h2>
+        <button id="revealButton">Reveal Secrets</button>
+        <p id="hiddenDetails" style="display: none;">
+            This film will explore Superman’s journey to balance his **Kryptonian heritage** with his **human upbringing**.
+            Expect **Lex Luthor**, **Krypto the Superdog**, and a **new Fortress of Solitude**! 🦸‍♂️🐶
+        </p>
+    </section>
+
+    <!-- I added a slider to measure excitement for the film -->
+    <section>
+        <h2>🔥 How Excited Are You?</h2>
+        <input type="range" id="excitementSlider" min="0" max="100" value="50">
+        <p>Excitement Level: <span id="excitementValue">50</span>%</p>
+    </section>
+
+    <!-- I added a button to open a Superman-themed modal -->
+    <button id="openModal">Superman's Powers</button>
+
+    <!-- This is the modal where I showcase Superman’s abilities -->
+    <div id="supermanModal" class="modal" role="dialog" aria-labelledby="modalHeading" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close" role="button" tabindex="0" aria-label="Close">&times;</span>
+            <h2 id="modalHeading">🚀 Superman’s Powers</h2>
+            <p>Super-strength, flight, heat vision, and more! Get ready to see them in action in **Superman 2025**!</p>
+        </div>
+    </div>
+
+    <!-- I included the footer with external links -->
+    <footer>
+        <p>&copy; 2025 Superman 2025 Fan Page. All rights reserved.</p>
+        <nav>
+            <a href="https://www.dc.com/">Official DC Site</a> |
+            <a href="https://www.imdb.com/title/tt15392268/">Superman 2025 on IMDb</a> |
+            <a href="https://twitter.com/JamesGunn">James Gunn on Twitter</a>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
